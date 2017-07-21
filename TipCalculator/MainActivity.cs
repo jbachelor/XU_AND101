@@ -33,11 +33,12 @@ namespace TipCalculator
         {
             System.Diagnostics.Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnCalculateClick)}");
             double billAmount;
+
             bool validBill = double.TryParse(inputBill.Text, out billAmount);
 
             if(validBill == false)
             {
-                System.Diagnostics.Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnCalculateClick)}:  Invalid bill entered:  {inputBill.Text}.");
+                System.Diagnostics.Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnCalculateClick)}:  Invalid bill entered:  [{inputBill.Text}]");
                 return;
             }
 
